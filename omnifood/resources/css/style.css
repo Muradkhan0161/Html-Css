@@ -90,7 +90,7 @@ h3{
     font-size: 105%;
     margin: 15px;
 }
-h3:after {
+.tox h3:after {
     display: block;
     height: 1px;
     background-color: #e67e22;
