@@ -290,7 +290,8 @@ header{
     left: 0;
     width: 100%;
     background-color: #f4f4f4;
-    box-shadow: 0 2px 2px rgb(148, 144, 144);
+    -webkit-box-shadow: 0 2px 2px rgb(148, 144, 144);
+            box-shadow: 0 2px 2px rgb(148, 144, 144);
     z-index: 9999;
 }
 
@@ -631,3 +632,27 @@ footer p{
  }
 
 
+ /*--------------------------------------------------*/
+/*--------------Animations
+/*--------------------------------------------------*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+ {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.js--wp-4
+ {
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
