@@ -9,7 +9,8 @@ Orange color: #e67e22
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     
 }
 
@@ -155,8 +156,10 @@ a:active{
 }
 a:hover,
 a:active{
+    cursor: pointer;
     color: #555;
     border-bottom: 1px solid transparent;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
@@ -172,6 +175,7 @@ input[type=submit]{
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
@@ -196,12 +200,14 @@ input[type=submit]{
 input[type=submit]:hover,
 input[type=submit]:active{
     background-color: rgb(175, 101, 36);
+    cursor: pointer;
 }
 
 .btn-full:hover,
 .btn-full:active,
 input[type=submit]{   
     border: 1px solid rgb(175, 101, 36);
+    cursor: pointer;
 }
 
 .btn-ghost:hover,
@@ -215,6 +221,7 @@ input[type=submit]{
 /*--------------------------------------------------*/
 
 header{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
     background-size: cover;
     background-position: center;
@@ -227,16 +234,25 @@ header{
     width: 1140px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     
 }
-.logo{
+.logo {
     height: 100px;
     widows: auto;
     float: left;
     margin-top: 20px;
 }
 
+.logo-black{
+    display: none;
+    height: 50px;
+    widows: auto;
+    float: left;
+    margin: 5px 0;
+}
+/* Main navi*/
 .main-nav{
     float: right;
     list-style: none;
@@ -257,6 +273,7 @@ header{
     text-decoration: none;
     font-size: ; 90%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2;
     transition: border-bottom 0.2;
     
 }
@@ -265,6 +282,35 @@ header{
 .main-nav li a:active{
     border-bottom: 2px solid #e67e22;
 }
+
+/*Sticky navi*/
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 2px rgb(148, 144, 144);
+    z-index: 9999;
+}
+
+.sticky .main-nav{
+    margin-top: 18px;
+}
+
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited
+{
+    padding: 17gpx 0;
+    color: #555;
+    
+}
+.sticky .logo { display: none;}
+.sticky .logo-black{ display: block;}
+
+
+
 /*--------------------------------------------------*/
 /* Features*/
 /*--------------------------------------------------*/
@@ -300,13 +346,18 @@ header{
     opacity: 0.7;
     width: 100%;
     height: auto;
-    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, -webkit-transform 0.4s;
     transition: transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s, -webkit-transform 0.4s;
 }
 
 .meal-photo img:hover {
     opacity: 1;
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
 }
 /*--------------------------------------------------*/
 /*--------------- How it works
@@ -387,6 +438,7 @@ header{
 /*--------------- Testimonial
 /*--------------------------------------------------*/
 .section-testimonial {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
     background-size: cover;
     color: #fff;
@@ -430,7 +482,8 @@ cite img{
     border-radius: 10px;
     width: 90%;
     margin-left: 5%;
-    box-shadow: 0 2px 2px #d8cccc;
+    -webkit-box-shadow: 0 2px 2px #d8cccc;
+            box-shadow: 0 2px 2px #d8cccc;
 }
 
 .plan-box div{
@@ -537,6 +590,7 @@ footer {
     text-decoration: none;
     border: 0;
     color: #888;
+    -webkit-transition: color .2s;
     transition: color .2s;
 }
 
@@ -553,6 +607,7 @@ footer {
 .googleplus-icon,
 .twitter-icon,
 .instagram-icon{
+    -webkit-transition: color .2s;
     transition: color .2s;
 }
 
@@ -574,4 +629,5 @@ footer p{
     color: #888;
     text-align: center;
  }
+
 
