@@ -283,6 +283,20 @@ header{
     border-bottom: 2px solid #e67e22;
 }
 
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
 /*Sticky navi*/
 .sticky{
     position: fixed;
@@ -303,7 +317,7 @@ header{
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited
 {
-    padding: 17gpx 0;
+    padding: 17px 0;
     color: #555;
     
 }
